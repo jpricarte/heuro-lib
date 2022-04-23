@@ -1,5 +1,5 @@
 pub mod heuristic;
-pub mod hill_climbing;
+pub mod local_search;
 
 use crate::heuristic::HeuristicElem;
 
@@ -27,7 +27,7 @@ impl HeuristicElem for Bar {
 #[cfg(test)]
 mod tests {
     use crate::Bar;
-    use crate::hill_climbing::hill_climbing;
+    use crate::local_search::hill_climbing;
 
     #[test]
     fn hill_climbing_test() {
