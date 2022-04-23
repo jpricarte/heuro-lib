@@ -13,7 +13,7 @@ use crate::local_search::hill_climbing;
             self.x
         }
 
-        fn get_neighbors(&self) -> Vec<Box<dyn HeuristicElem>>  {
+        fn get_neighbours(&self) -> Vec<Box<dyn HeuristicElem>>  {
             vec!{Box::new(Bar{x: 0.0}),Box::new(Bar{x: 1000.0})}
         }
 

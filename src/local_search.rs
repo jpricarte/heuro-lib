@@ -6,12 +6,12 @@ pub fn hill_climbing(initial_state: Box<dyn HeuristicElem>, iteration_limit: u32
     let mut current_value = current_state.evaluate();
 
     for _ in 0..iteration_limit {
-        let neighbors = current_state.get_neighbors();
-        for neighbor in neighbors.iter() {
-            let neighbor_value = neighbor.evaluate();
-            if neighbor_value <= current_value {
-                current_state = (*neighbor).dyn_clone();
-                current_value = neighbor_value;
+        let neighbours = current_state.get_neighbours();
+        for neighbour in neighbours.iter() {
+            let neighbour_value = neighbour.evaluate();
+            if neighbour_value <= current_value {
+                current_state = (*neighbour).dyn_clone();
+                current_value = neighbour_value;
             }
         }
     }
