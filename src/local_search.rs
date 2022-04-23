@@ -18,3 +18,4 @@ pub fn hill_climbing(initial_state: Box<dyn HeuristicElem>, iteration_limit: u32
 
     current_state
 }
+
